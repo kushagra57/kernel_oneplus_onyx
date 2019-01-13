@@ -43,19 +43,31 @@ static ssize_t soundcontrol_version(struct device * dev, struct device_attribute
 static DEVICE_ATTR(highperf_enabled, 0664, hph_perf_show, hph_perf_store);
 static DEVICE_ATTR(version, 0664 , soundcontrol_version, NULL);
 
+<<<<<<< HEAD
 static struct attribute *soundcontrol_attributes[] = 
+=======
+static struct attribute *soundcontrol_attributes[] =
+>>>>>>> sound: Add high-perf audio control
 {
 	&dev_attr_highperf_enabled.attr,
 	&dev_attr_version.attr,
 	NULL
 };
 
+<<<<<<< HEAD
 static struct attribute_group soundcontrol_group = 
+=======
+static struct attribute_group soundcontrol_group =
+>>>>>>> sound: Add high-perf audio control
 {
 	.attrs  = soundcontrol_attributes,
 };
 
+<<<<<<< HEAD
 static struct miscdevice soundcontrol_device = 
+=======
+static struct miscdevice soundcontrol_device =
+>>>>>>> sound: Add high-perf audio control
 {
 	.minor = MISC_DYNAMIC_MINOR,
 	.name = "soundcontrol",
